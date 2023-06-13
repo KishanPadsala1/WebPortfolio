@@ -6,6 +6,10 @@ const Education = mongoose.Schema({
   course: String,
   marks: String,
   date: String,
+  bachelorUniversityName: String,
+  bachelorCourseName: String,
+  bachelorMarks: String,
+  date1: String,
   imageUrl: String,
 });
 

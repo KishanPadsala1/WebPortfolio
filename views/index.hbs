@@ -61,87 +61,91 @@
     </section>
 
       {{!-- education section --}}
+      {{#each educations}}
       <section class="background1 banner2_section py-5">
         <div class="container">
           <div class="row">
             <div class="col-md-6 text-center pt-5">
               {{!-- left side text --}}
-              <h3>Education</h3>
+              <h3>{{this.sectionName}}</h3>
               <div class="row py-3">
                 <div class="col-md-6">
-                  <p>Gujarat Technological University</p>
-                  <p>Diploma in Computer Engineering</p>
+                  <p>{{this.universityName}}</p>
+                  <p>{{this.course}}</p>
                 </div>
                 <div class="col-md-6">
-                  <p>CGPA: 8.95</p>
-                  <p>Aug 2019 – June 2022</p>
+                  <p>{{this.marks}}</p>
+                  <p>{{this.date}}</p>
                 </div>                                
               </div> 
 
               <div class="row py-3">
                 <div class="col-md-6">
-                  <p>Gujarat Technological University</p>
-                  <p>Bachelor of Computer Engineering</p>
+                  <p>{{this.bachelorUniversityName}}</p>
+                  <p>{{this.bachelorCourseName}}</p>
                 </div>
                 <div class="col-md-6">
-                  <p>-</p>
-                  <p>Aug 2022 – Present</p>
+                  <p>{{this.bachelorMarks}}</p>
+                  <p>{{this.date1}}</p>
                 </div>                                
               </div> 
 
             </div>
             <div class="col-md-6 text-center pt-2">
               {{!-- right side image --}}
-              <img class="img-fluid" style="height: 350px;" src="/static/images/education-image.jpg" alt="" srcset="">
+              <img class="img-fluid" style="height: 350px;" src="{{this.imageUrl}}" alt="" srcset="">
             </div>
           </div>
         </div>
       </section>
-
+      {{/each}}
 
       {{!-- Experience section --}}
+      {{#each experiences}}
       <section class="background1 banner2_section py-5">
         <div class="container">
           <div class="row">
             <div class="col-md-6 text-center pt-2">
               {{!-- right side image --}}
-              <img class="img-fluid" style="height: 350px;" src="/static/images/experience-image.jpg" alt="" srcset="">
+              <img class="img-fluid" style="height: 350px;" src="{{this.imageUrl}}" alt="" srcset="">
             </div>
             <div class="col-md-6 pt-5">
               {{!-- left side text --}}
               <div class="text-center">
 
-              <h3>Experience</h3>
+              <h3>{{this.title}}</h3>
               <div class="row py-3">
                 <div class="col-md-6">
-                  <p>FullStack Developer</p>
-                  <p>Wokontech IT Solutions – Internship</p>
+                  <p>{{this.developer}}</p>
+                  <p>{{this.companyName}}</p>
                 </div>
                 <div class="col-md-6">
-                  <p>Oct 2022 – Jan 2023</p>
-                  <p>On-site</p>
+                  <p>{{this.date}}</p>
+                  <p>{{this.date1}}</p>
                 </div>                                
                </div> 
               </div>
 
               <ul>
-                <li>Used various languages, including HTML, CSS, JavaScript, C#, SQL.</li>
-                <li>I am familiar with frameworks like ASP.NET, Bootstrap 5.</li>
-                <li>I am familiar with database MySQL.</li>
-                <li>Worked on Payment Portal & Donation Portal using above technologies.</li>
+                {{#each this.contentList}}
+                <li>{{this.content}}</li> 
+                {{/each}}               
               </ul>
             </div>            
           </div>
         </div>
       </section>
+      {{/each}}
       
       {{!-- About section --}}
       <section id="about_section" class="background1 about_section py-5">
         <div class="container text-center">
           <div class="row">
             <div class="col-md-12">
-              <h3>About</h3>
-                <p>This web project is dynamic so many thinks can manage at one place. I used populer frameworks like as Node JS & Express. I used MongoDB as database. Using Mongoose library, I implemented connection with MongoDB database for provides schema validation and to translate between objects in code and the representation of those objects in MongoDB. I used hbs as template engine.</p>                
+              {{#each abouts}}
+              <h3>{{this.title}}</h3>
+                <p>{{this.content}}</p>
+                {{/each}}                
             </div>
           </div>
         </div>
@@ -150,9 +154,11 @@
       <footer class="footer text-center py-5">
         <div class="container">
           <div class="row">
+            {{#each footers}}
             <div class="col-md-12">
-              @ 2023 Copyright: <span>Kishan Padsala</span>
+              {{this.content}}
             </div>
+            {{/each}}
           </div>
         </div>
       </footer>
