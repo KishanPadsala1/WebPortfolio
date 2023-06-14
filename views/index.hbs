@@ -12,12 +12,20 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/static/css/style.css">
+
+    {{!-- favicon --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/images/favicon/site.webmanifest">
+
   </head>
   <body>    
     {{>navbar data=details}}
 
-    {{!-- Introduction section --}}
-    <section class="background1 introduction_section py-5">
+    <div class="background1">    
+    {{!-- Introduction section --}}    
+    <section class="introduction_section py-5">
       <div class="container text-center">
         <div class="row">
           <div class="col-md-12">        
@@ -33,17 +41,18 @@
       {{>slider slides=slides}}
     
     {{!-- services section --}}
-    <section id="services_section" class="background1 py-3">
+    <section id="services_section" class="pt-5 pb-3">
       <div class="container">
         <h6 class="text-center">MY SERVICES</h6>
       <h1 class="text-center">Here Are Some Of My Skills</h1>
       <div class="row mt-5">
 
-        {{#each services}}        
-          <div class="card">
+        {{#each services}}      
+        <div class="py-3">          
+          <div class="card bg-light text-white bg-opacity-25 rounded-5">
             <div class="card-body">      
               <div class="container text-center py-3">
-                <i class="{{this.icon}} text-secondary service_icon"></i>
+                <i class="{{this.icon}} service_icon"></i>
               </div>               
               <h4 class="card-title">{{this.title}}</h4>      
 
@@ -52,9 +61,9 @@
                 <li>{{this.languageName}}</li>
                 {{/each}}
               </ul>
-
-          </div>
-        </div> 
+            </div>
+          </div> 
+        </div>
         {{/each}}
         </div>
       </div>
@@ -62,7 +71,7 @@
 
       {{!-- education section --}}
       {{#each educations}}
-      <section class="background1 banner2_section py-5">
+      <section class="banner2_section py-5">
         <div class="container">
           <div class="row">
             <div class="col-md-6 text-center pt-5">
@@ -93,7 +102,7 @@
             </div>
             <div class="col-md-6 text-center pt-2">
               {{!-- right side image --}}
-              <img class="img-fluid" style="height: 350px;" src="{{this.imageUrl}}" alt="" srcset="">
+              <img class="img-fluid rounded-4" style="height: 350px;" src="{{this.imageUrl}}" alt="" srcset="">
             </div>
           </div>
         </div>
@@ -102,12 +111,12 @@
 
       {{!-- Experience section --}}
       {{#each experiences}}
-      <section class="background1 banner2_section py-5">
+      <section class="banner2_section py-5">
         <div class="container">
           <div class="row">
             <div class="col-md-6 text-center pt-2">
               {{!-- right side image --}}
-              <img class="img-fluid" style="height: 350px;" src="{{this.imageUrl}}" alt="" srcset="">
+              <img class="img-fluid rounded-4" style="height: 350px;" src="{{this.imageUrl}}" alt="" srcset="">
             </div>
             <div class="col-md-6 pt-5">
               {{!-- left side text --}}
@@ -138,7 +147,7 @@
       {{/each}}
       
       {{!-- About section --}}
-      <section id="about_section" class="background1 about_section py-5">
+      <section id="about_section" class="about_section py-5">
         <div class="container text-center">
           <div class="row">
             <div class="col-md-12">
@@ -150,18 +159,35 @@
           </div>
         </div>
       </section>
+    </div>
     
-      <footer class="footer text-center py-5">
+      <footer class="footer py-5">
         <div class="container">
-          <div class="row">
+          <div class="d-flex justify-content-between">
             {{#each footers}}
-            <div class="col-md-12">
-              {{this.content}}
+            <div class="fw-medium">
+              {{this.content}}              
             </div>
             {{/each}}
+
+            <div class="row"> 
+              <div class="col-md-6">
+                <a class="icon-link icon-link-hover fw-medium" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); text-decoration: none;" href="https://www.linkedin.com/in/kishan-padsala/" target="_blank">
+                  <i class="fa-brands fa-linkedin linkedin_icon"></i>
+                  LinkedIn
+                </a> 
+              </div>             
+              <div class="col-md-6">
+                <a class="icon-link icon-link-hover fw-medium" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); text-decoration: none;" href="mailto:kishanpadsala1@gmail.com" target="_blank">
+                  <i class="fa-solid fa-envelope gmail_icon"></i>
+                  Gmail
+                </a>       
+              </div>                                                                                         
+            </div>
           </div>
         </div>
       </footer>
+            
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
