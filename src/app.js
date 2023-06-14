@@ -14,6 +14,7 @@ const About = require("./models/About");
 const Footer = require("./models/Footer");
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 const routes = require("./routes/main");
 
@@ -25,6 +26,6 @@ app.set("view engine", "hbs");
 app.set("views", "views");
 hbs.registerPartials("views/partials");
 
-app.listen(process.env.PORT | 3000, () => {
+app.listen(PORT, () => {
   console.log("server started...");
 });
