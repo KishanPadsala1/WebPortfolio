@@ -6,7 +6,7 @@ mongoose
   .connect(DB, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
-    serverSelectionTimeoutMS: 5000,
+    serverSelectionTimeoutMS: 2000,
   })
   .then(() => {
     console.log("db connected");
