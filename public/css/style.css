@@ -1,3 +1,19 @@
+.introduction_section {
+  height: 300px;
+}
+
+.introduction_content {
+  font-size: large;
+}
+
+.about_section {
+  height: 320px;
+}
+
+.about_content {
+  font-size: large;
+}
+
 .slider-image {
   height: 700px !important;
   object-fit: cover;
@@ -5,6 +21,18 @@
 
 .service_icon {
   font-size: 50px;
+}
+
+.service_content {
+  font-size: large;
+}
+
+.education_content {
+  font-size: large;
+}
+
+.experience_content {
+  font-size: large;
 }
 
 .linkedin_icon {

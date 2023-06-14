@@ -30,8 +30,8 @@
         <div class="row">
           <div class="col-md-12">        
             {{#each introductions}}    
-            <h1>{{this.title}}</h1>
-            <p>{{this.content}}</p>          
+            <h1 class="py-4">{{this.title}}</h1>
+            <p class="introduction_content">{{this.content}}</p>          
             {{/each}}
           </div>
         </div>
@@ -54,9 +54,9 @@
               <div class="container text-center py-3">
                 <i class="{{this.icon}} service_icon"></i>
               </div>               
-              <h4 class="card-title">{{this.title}}</h4>      
+              <h2 class="card-title">{{this.title}}</h2>      
 
-              <ul>
+              <ul class="service_content">
                 {{#each this.description}}
                 <li>{{this.languageName}}</li>
                 {{/each}}
@@ -76,8 +76,8 @@
           <div class="row">
             <div class="col-md-6 text-center pt-5">
               {{!-- left side text --}}
-              <h3>{{this.sectionName}}</h3>
-              <div class="row py-3">
+              <h1>{{this.sectionName}}</h1>
+              <div class="row py-4 education_content">
                 <div class="col-md-6">
                   <p>{{this.universityName}}</p>
                   <p>{{this.course}}</p>
@@ -88,7 +88,7 @@
                 </div>                                
               </div> 
 
-              <div class="row py-3">
+              <div class="row py-3 education_content">
                 <div class="col-md-6">
                   <p>{{this.bachelorUniversityName}}</p>
                   <p>{{this.bachelorCourseName}}</p>
@@ -102,7 +102,7 @@
             </div>
             <div class="col-md-6 text-center pt-2">
               {{!-- right side image --}}
-              <img class="img-fluid rounded-4" style="height: 350px;" src="{{this.imageUrl}}" alt="" srcset="">
+              <img class="img-fluid rounded-4" style="height: 370px;" src="{{this.imageUrl}}" alt="" srcset="">
             </div>
           </div>
         </div>
@@ -116,14 +116,14 @@
           <div class="row">
             <div class="col-md-6 text-center pt-2">
               {{!-- right side image --}}
-              <img class="img-fluid rounded-4" style="height: 350px;" src="{{this.imageUrl}}" alt="" srcset="">
+              <img class="img-fluid rounded-4" style="height: 370px;" src="{{this.imageUrl}}" alt="" srcset="">
             </div>
             <div class="col-md-6 pt-5">
               {{!-- left side text --}}
               <div class="text-center">
 
-              <h3>{{this.title}}</h3>
-              <div class="row py-3">
+              <h1>{{this.title}}</h1>
+              <div class="row py-4 experience_content">
                 <div class="col-md-6">
                   <p>{{this.developer}}</p>
                   <p>{{this.companyName}}</p>
@@ -135,7 +135,7 @@
                </div> 
               </div>
 
-              <ul>
+              <ul class="experience_content">
                 {{#each this.contentList}}
                 <li>{{this.content}}</li> 
                 {{/each}}               
@@ -152,16 +152,16 @@
           <div class="row">
             <div class="col-md-12">
               {{#each abouts}}
-              <h3>{{this.title}}</h3>
-                <p>{{this.content}}</p>
-                {{/each}}                
+              <h1>{{this.title}}</h1>
+              <p class="about_content py-4">{{this.content}}</p>
+              {{/each}}                
             </div>
           </div>
         </div>
       </section>
     </div>
     
-      <footer class="footer py-5">
+      <footer class="footer text-white bg-dark py-5">
         <div class="container">
           <div class="d-flex justify-content-between">
             {{#each footers}}
@@ -172,13 +172,13 @@
 
             <div class="row"> 
               <div class="col-md-6">
-                <a class="icon-link icon-link-hover fw-medium" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); text-decoration: none;" href="https://www.linkedin.com/in/kishan-padsala/" target="_blank">
+                <a class="icon-link icon-link-hover fw-medium" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); text-decoration: none; color:white;" href="https://www.linkedin.com/in/kishan-padsala/" target="_blank">
                   <i class="fa-brands fa-linkedin linkedin_icon"></i>
                   LinkedIn
                 </a> 
               </div>             
               <div class="col-md-6">
-                <a class="icon-link icon-link-hover fw-medium" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); text-decoration: none;" href="mailto:kishanpadsala1@gmail.com" target="_blank">
+                <a class="icon-link icon-link-hover fw-medium" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0); text-decoration: none; color:white;" href="mailto:kishanpadsala1@gmail.com" target="_blank">
                   <i class="fa-solid fa-envelope gmail_icon"></i>
                   Gmail
                 </a>       
