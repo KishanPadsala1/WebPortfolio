@@ -31,7 +31,7 @@
           <div class="col-md-12">        
             {{#each introductions}}    
             <h1 class="py-4">{{this.title}}</h1>
-            <p class="introduction_content">{{this.content}}</p>          
+            <p class="introduction_content mb-5">{{this.content}}</p>          
             {{/each}}
           </div>
         </div>
@@ -71,10 +71,10 @@
 
       {{!-- education section --}}
       {{#each educations}}
-      <section class="banner2_section py-5">
+      <section id="education_section" class="banner2_section py-5">
         <div class="container">
           <div class="row">
-            <div class="col-md-6 text-center pt-5">
+            <div class="col-md-6 text-center pt-3">
               {{!-- left side text --}}
               <h1>{{this.sectionName}}</h1>
               <div class="row py-4 education_content">
@@ -111,7 +111,7 @@
 
       {{!-- Experience section --}}
       {{#each experiences}}
-      <section class="banner2_section py-5">
+      <section id="experience_section" class="banner2_section py-5">
         <div class="container">
           <div class="row">
             <div class="col-md-6 text-center pt-2">
@@ -153,7 +153,7 @@
             <div class="col-md-12">
               {{#each abouts}}
               <h1>{{this.title}}</h1>
-              <p class="about_content py-4">{{this.content}}</p>
+              <p class="about_content pt-4 pb-5">{{this.content}}</p>
               {{/each}}                
             </div>
           </div>
@@ -161,7 +161,7 @@
       </section>
     </div>
     
-      <footer class="footer text-white bg-dark py-5">
+      <footer class="footer border-top text-white bg-dark py-5">
         <div class="container">
           <div class="d-flex justify-content-between">
             {{#each footers}}
